@@ -12,6 +12,20 @@
     class="btn btn-primary" 
     [disabled] = "!allowNewServer"
     (click)="onCreateServer()">Create Server</button>
+
+
+
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="username">
+
+<button 
+    class="btn btn-primary" 
+    [disabled] = "!username"
+    (click)="onUpdateUsername($event)">Update username</button>
+
+<p>{{username}}</p>
 <p>{{allowNewServer}}</p>
 <p [innerText]="allowNewServer"></p>
 <p>{{serverCreationStatus}}</p>
